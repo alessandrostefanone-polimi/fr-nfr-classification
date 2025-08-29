@@ -1,0 +1,51 @@
+{
+  "total_samples": 10,
+  "correct_predictions": 8,
+  "accuracy": 0.8,
+  "precision": 0.8666666666666666,
+  "recall": 0.8,
+  "f1_score": 0.8,
+  "average_confidence": 0.9349999999999999,
+  "average_processing_time": 10.363368,
+  "detailed_report": {
+    "FR": {
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1-score": 0.8,
+      "support": 6.0
+    },
+    "NFR": {
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1-score": 0.8,
+      "support": 4.0
+    },
+    "accuracy": 0.8,
+    "macro avg": {
+      "precision": 0.8333333333333333,
+      "recall": 0.8333333333333333,
+      "f1-score": 0.8,
+      "support": 10.0
+    },
+    "weighted avg": {
+      "precision": 0.8666666666666666,
+      "recall": 0.8,
+      "f1-score": 0.8,
+      "support": 10.0
+    }
+  },
+  "model_info": {
+    "model_type": "openai",
+    "model_name": "deepseek-chat",
+    "use_few_shot": true,
+    "temperature": 0.1
+  },
+  "configuration": {
+    "name": "DeepSeek R1 (Few-Shot)",
+    "model_type": "openai",
+    "model_name": "deepseek-chat",
+    "use_few_shot": true,
+    "evaluation_time": 115.88296389579773,
+    "timestamp": "2025-08-28T10:05:00.782908"
+  }
+}

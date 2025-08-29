@@ -1,0 +1,43 @@
+{
+  "total_samples": 10,
+  "correct_predictions": 10,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "average_confidence": 0.945,
+  "average_processing_time": 2.4111641000000006,
+  "detailed_report": {
+    "FR": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "NFR": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 10.0
+    }
+  },
+  "model_info": {
+    "model_type": "claude",
+    "model_name": "claude-3-5-haiku-20241022",
+    "use_few_shot": true,
+    "temperature": 0.1
+  }
+}

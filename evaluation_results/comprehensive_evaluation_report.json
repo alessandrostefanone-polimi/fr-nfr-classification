@@ -1,0 +1,83 @@
+{
+  "evaluation_metadata": {
+    "dataset_source": "limsc/fr-nfr-classification (HuggingFace)",
+    "bert_baseline_source": "Lim, S. C. (2022). A Case for Pre-trained Language Models in Systems Engineering. MIT Thesis.",
+    "evaluation_date": "2025-08-28T10:14:55.354442",
+    "total_samples": 4
+  },
+  "bert_baselines": {
+    "BERT_base": {
+      "f1_score": 0.838,
+      "precision": 0.838,
+      "recall": 0.838,
+      "source": "Lim (2022), Table 4-10"
+    },
+    "RoBERTa_base": {
+      "f1_score": 0.826,
+      "precision": 0.826,
+      "recall": 0.826,
+      "source": "Lim (2022), Table 4-10"
+    },
+    "SciBERT": {
+      "f1_score": 0.85,
+      "precision": 0.85,
+      "recall": 0.85,
+      "source": "Lim (2022), Table 4-10"
+    },
+    "ReqBERT_TAPT": {
+      "f1_score": 0.841,
+      "precision": 0.841,
+      "recall": 0.841,
+      "source": "Lim (2022), Table 4-10 - Task Adaptive Pre-Training"
+    },
+    "ReqRoBERTa_TAPT": {
+      "f1_score": 0.844,
+      "precision": 0.844,
+      "recall": 0.844,
+      "source": "Lim (2022), Table 4-10 - Task Adaptive Pre-Training"
+    },
+    "ReqSciBERT_TAPT": {
+      "f1_score": 0.836,
+      "precision": 0.836,
+      "recall": 0.836,
+      "source": "Lim (2022), Table 4-10 - Task Adaptive Pre-Training"
+    }
+  },
+  "llm_results": {
+    "DeepSeek R1 (Few-Shot)": {
+      "f1_score": 0.9205254515599343,
+      "precision": 0.9240259740259741,
+      "recall": 0.92,
+      "accuracy": 0.92,
+      "model_type": "openai",
+      "use_few_shot": true
+    }
+  },
+  "best_performers": {
+    "best_llm": {
+      "name": "DeepSeek R1 (Few-Shot)",
+      "metrics": {
+        "f1_score": 0.9205254515599343,
+        "precision": 0.9240259740259741,
+        "recall": 0.92,
+        "accuracy": 0.92,
+        "model_type": "openai",
+        "use_few_shot": true
+      }
+    },
+    "best_bert": {
+      "name": "SciBERT",
+      "metrics": {
+        "f1_score": 0.85,
+        "precision": 0.85,
+        "recall": 0.85,
+        "source": "Lim (2022), Table 4-10"
+      }
+    }
+  },
+  "comparative_analysis": {
+    "llm_vs_bert_f1": 0.07052545155993428,
+    "llm_outperforms_bert": true,
+    "improvement_percentage": 8.297111948227563
+  }
+}

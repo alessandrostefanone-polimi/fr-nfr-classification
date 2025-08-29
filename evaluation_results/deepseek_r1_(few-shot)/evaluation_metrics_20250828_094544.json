@@ -1,0 +1,10 @@
+{
+  "configuration": {
+    "name": "DeepSeek R1 (Few-Shot)",
+    "model_type": "openai",
+    "model_name": "deepseek-chat",
+    "use_few_shot": true,
+    "evaluation_time": 13.181642532348633,
+    "timestamp": "2025-08-28T09:45:44.047098"
+  }
+}

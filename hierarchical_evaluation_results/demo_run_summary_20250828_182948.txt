@@ -1,0 +1,38 @@
+HIERARCHICAL REQUIREMENTS CLASSIFICATION WORKFLOW
+=======================================================
+
+Experiment: demo_run
+Timestamp: 20250828_182948
+Total Requirements Processed: 3
+
+FR/NFR DISTRIBUTION:
+  Functional Requirements (FR): 0
+  Non-Functional Requirements (NFR): 3
+
+NFR SUBCLASS DISTRIBUTION:
+  UNKNOWN: 3 (100.0%)
+
+PROCESSING TIME STATISTICS:
+  Mean: 5.57s
+  Median: 5.73s
+  Min: 4.47s
+  Max: 6.50s
+  Total: 16.70s
+
+SAMPLE CLASSIFICATIONS:
+--------------------------------------------------
+#1:
+Text: The system shall respond to user queries within 2 seconds under normal load cond...
+Classification: NFR_UNKNOWN
+Confidence: FR/NFR=0.95
+--------------------------------------------------
+#2:
+Text: All user authentication must use multi-factor authentication with encrypted toke...
+Classification: NFR_UNKNOWN
+Confidence: FR/NFR=0.95
+--------------------------------------------------
+#3:
+Text: The user interface shall be intuitive for users with minimal training required....
+Classification: NFR_UNKNOWN
+Confidence: FR/NFR=0.95
+--------------------------------------------------
