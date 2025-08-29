@@ -1,0 +1,11 @@
+requirement_text,true_label,fr_nfr_prediction,fr_nfr_confidence,nfr_subclass_prediction,nfr_subclass_confidence,final_prediction,is_correct,processing_time
+promise_1,7,FR,0.7,,,FR,False,2.1368467807769775
+promise_3,138,NFR,0.3,O,0.3,NFR_O,False,4.322407484054565
+promise_2,61,NFR,0.3,O,0.2,NFR_O,False,4.793946981430054
+promise_1,18,FR,0.7,,,FR,False,2.054673910140991
+promise_14,606,NFR,0.3,O,0.3,NFR_O,False,4.194012880325317
+promise_8,432,NFR,0.3,O,0.3,NFR_O,False,4.1683509349823
+promise_1,5,FR,0.7,,,FR,False,2.2452774047851562
+promise_6,348,NFR,0.3,O,0.3,NFR_O,False,4.985717296600342
+promise_5,218,NFR,0.3,O,0.3,NFR_O,False,4.193217992782593
+promise_3,76,NFR,0.3,O,0.3,NFR_O,False,4.384994983673096

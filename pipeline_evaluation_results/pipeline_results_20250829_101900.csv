@@ -1,0 +1,11 @@
+requirement_text,true_label,fr_nfr_prediction,fr_nfr_confidence,nfr_subclass_prediction,nfr_subclass_confidence,final_prediction,is_correct,processing_time
+The system shall respond to user queries within 2 seconds under normal load conditions.,PE,UNKNOWN,0.0,,,UNKNOWN,False,0.2574291229248047
+The application must handle up to 1000 concurrent users without performance degradation.,PE,UNKNOWN,0.0,,,UNKNOWN,False,0.1441349983215332
+Database queries shall execute in less than 500 milliseconds for 95% of requests.,PE,UNKNOWN,0.0,,,UNKNOWN,False,0.16119098663330078
+The system throughput shall be at least 100 transactions per second.,PE,UNKNOWN,0.0,,,UNKNOWN,False,0.13396763801574707
+All user passwords must be encrypted using AES-256 encryption standard.,SE,UNKNOWN,0.0,,,UNKNOWN,False,0.20385408401489258
+The system shall implement two-factor authentication for all admin users.,SE,UNKNOWN,0.0,,,UNKNOWN,False,0.1325850486755371
+User sessions must expire after 30 minutes of inactivity for security.,SE,UNKNOWN,0.0,,,UNKNOWN,False,0.14893007278442383
+All data transmissions shall use HTTPS with TLS 1.3 or higher encryption.,SE,UNKNOWN,0.0,,,UNKNOWN,False,0.2564222812652588
+The user interface shall be intuitive for users with minimal training required.,US,UNKNOWN,0.0,,,UNKNOWN,False,0.1404581069946289
+The system shall provide context-sensitive help for all major functions.,US,UNKNOWN,0.0,,,UNKNOWN,False,0.15026545524597168

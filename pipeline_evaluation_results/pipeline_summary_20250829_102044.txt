@@ -1,0 +1,26 @@
+Complete Hierarchical Pipeline Evaluation Summary
+==================================================
+
+Timestamp: 2025-08-29 10:20:44
+Total Samples: 10
+Overall Accuracy: 1.000 (100.0%)
+
+Performance by Class:
+  PE: 4/4 = 1.000 (100.0%)
+  SE: 4/4 = 1.000 (100.0%)
+  US: 2/2 = 1.000 (100.0%)
+
+Classification Distribution:
+  FR: 0
+  NFR: 10
+
+NFR Subclass Distribution:
+  PE: 4
+  SE: 4
+  US: 2
+
+Processing Time Statistics:
+  Total: 50.7s
+  Average: 5.1s
+  Min: 4.5s
+  Max: 6.4s

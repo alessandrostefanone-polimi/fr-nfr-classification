@@ -136,6 +136,8 @@ CLASSIFICATION GUIDELINES:
 3. Look for measurement units, quality adjectives, or constraint language (suggests NFR)
 4. Consider ISO/IEC 25010 quality characteristics for NFR identification
 5. Check for action verbs indicating system behavior (suggests FR)
+
+IMPORTANT: Functional requirements describe *what* the system shall do (business logic, features, user stories). Non-Functional requirements—including Operational (O)—describe *how* the system should be managed, monitored, maintained, or supported, but never introduce business features or logic.
 """
     
     @staticmethod
@@ -148,7 +150,7 @@ You are an expert requirements engineer. Classify the following requirement as e
 {classification_rules}
 
 CLASSIFICATION EXAMPLES:
-
+<classification-examples>
 Example 1:
 Requirement: "The system shall calculate the monthly payment amount based on loan principal, interest rate, and term."
 Classification: FR
@@ -178,9 +180,29 @@ Requirement: "Only authorized users can access customer financial data."
 Classification: NFR
 Reasoning: Security requirement specifying access control constraint (ISO/IEC 25010 Security characteristic). Focuses on "who can access" rather than system function.
 Key Indicators: ["authorized users", "access control", "security constraint"]
+</classification-examples>
 
-NOW CLASSIFY THIS REQUIREMENT:
-Requirement: "{requirement_text}"
+Pay particular attention to Operational Non-Functional Requirements (NFRs) which may be wrongly classified as Functional Requirements (FRs). 
+
+<operational-NFRs-examples>
+Operational (O) NFR Example #1:
+Requirement: "The product will be available for licensing as a one-server two-five servers or five-or-more servers license."
+Classification: NFR
+Reasoning: Describes how the product will be licensed and deployed, focusing on operational aspects rather than specific functionality.
+Key Indicators: ["available for licensing", "one-server", "two-five servers", "five-or-more servers"]
+
+Operational (O) NFR Example #2:
+Requirement: "The system shall operate within the Windows XP Professional operating system."
+Classification: NFR
+Reasoning: Specifies the operating environment for the system, which is an operational aspect rather than a functional requirement.
+Key Indicators: ["Windows XP Professional", "operating system"]
+
+Operational (O) NFR Example #3:
+Requirement: "The product shall interface with the Choice Parts System. This provides the feed of recycled parts data."
+Classification: NFR
+Reasoning: Specifies the integration with an external system, which is an operational aspect rather than a functional requirement.
+Key Indicators: ["interface with", "Choice Parts System", "recycled parts data"]
+</operational-NFRs-examples>
 
 Please respond with a JSON object in exactly this format:
 {{
@@ -329,16 +351,16 @@ class RequirementClassifier:
                 base_url="http://localhost:11434"
             )
 
-        elif self.model_type == "openai":
+        elif self.model_type == "deepseek":
             # Ensure API key is set
-            if not os.environ.get("OPENAI_API_KEY"):
-                os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
+            if not os.environ.get("DEEPSEEK_API_KEY"):
+                os.environ["DEEPSEEK_API_KEY"] = getpass.getpass("Enter your DEEPSEEK API key: ")
 
             # Instantiate ChatOpenAI (model_name and openai_api_key are accepted in current versions)
             return ChatOpenAI(
                 model_name=self.model_name,
                 temperature=self.temperature,
-                openai_api_key=os.getenv("OPENAI_API_KEY"),
+                openai_api_key=os.getenv("DEEPSEEK_API_KEY"),
                 base_url="https://api.deepseek.com",
                 max_tokens=1000
             )

@@ -1,0 +1,51 @@
+requirement,true_label,fr_nfr_pred,nfr_subclass_pred,final_pred,correct,time
+hen streaming a movie the buffering time should take no longer than 10 seconds (plus any latency on the user's connection.),2,NFR,PE,PE,True,18.097979068756104
+The application shall be able to complete every user transaction within one fourth of a second of receiving the request over the network.,2,NFR,PE,PE,True,17.244724988937378
+The response time of general student management tasks shall take no longer than 5 seconds and the response time of schedule generation shall take no longer than 30 seconds.,2,NFR,PE,PE,True,18.202584981918335
+The product shall synchronize with the office system every hour.,2,NFR,O,O,False,15.551884174346924
+The product interface should be fast. The response time of the product interface should not exceed 2 seconds 90% of the time. For 10% of the time the response time should not be more than 10 seconds.not be more than 10 seconds.,2,NFR,PE,PE,True,20.160486459732056
+ystem shall let customers register on the website as a œpay as you go user in under 5 minutes.,2,NFR,US,US,False,17.99782371520996
+Izogn Administrator must be able to update the category listings on the website within 2 minutes.,2,NFR,O,O,False,16.813847064971924
+Staff members shall be able to complete a set of tasks in a timely manner.,2,NFR,PE,PE,True,16.226645708084106
+System shall let the administrator add/remove categories on the website in under 5 minutes.,2,NFR,O,O,False,16.505555868148804
+Customer shall be able to check the status of their prepaid card by entering in the PIN number in under 5 seconds.,2,NFR,PE,PE,True,17.747726678848267
+The Disputes System shall allow the user to create or initiate a chargeback request. The system must prompt the user to enter the required information to initiate a chargeback request. The chargeback request results in a printed chargeback notification that is sent to merchant indicating that their account will be charged back if no proof is provided that the disputed transaction is valid.,0,FR,,FR,True,12.652368783950806
+Formula substitutionary ingredients shall be kept in persisted order,0,FR,,FR,True,8.262470006942749
+A staff member shall have the ability to manage the progress of a part time student which includes modifying their sequence of classes and timeline of classes.,0,FR,,FR,True,8.973360538482666
+The product shall remove players who have been inactive for 24 hours from the list of players.,0,FR,,FR,True,9.247570514678955
+The product shall make inactive players unavailable for selection from the list of players.,0,FR,,FR,True,9.407081127166748
+The product shall update existing conference rooms.,0,FR,,FR,True,8.366500616073608
+The product shall display conference rooms according to search parameters.,0,FR,,FR,True,8.418915271759033
+The user shall search for the preferred repair facility using vehicle vehicle location and radius in miles,0,FR,,FR,True,9.68209457397461
+Program Administrators and Nursing Staff Members shall be able to add clinical classes or sections to a sequence of classes,0,FR,,FR,True,9.735809803009033
+The adjuster shall review the collision estimate.,0,FR,,FR,True,8.727380990982056
+he WCS system shall not allow automatic logins by any user. Cookies containing WCS login information about a user will not be stored on a user's computer.,3,NFR,SE,SE,True,18.930745601654053
+The Commissioner will be the only authorized user per league to adjust league settings.,3,NFR,SE,SE,True,16.383013010025024
+The product shall ensure that it can only be accessed by authorized users. The product will be able to distinguish between authorized and unauthorized users in all access attempts,3,NFR,SE,SE,True,19.029818296432495
+The product shall have security.The product shall provide authentication and authorization.,3,NFR,SE,SE,True,15.420756101608276
+The System shall granularly control access rights to all major subsystems. It should be possible to assign access rights to all subsystems independently.,3,NFR,SE,SE,True,18.069265842437744
+Fit Criterion: Dr Susan Poslusny and Karen Sysol are the only people who shall have access to the final class section scheduling for the system that interfaces with CampusConnect.,3,NFR,SE,SE,True,18.42788529396057
+A customer can only stream a movie if they purchased it and are within the 2 day viewing period.,3,FR,,FR,False,9.72768759727478
+If a user account is revoked it can only be re-instantiated by the System Administrator.,3,NFR,SE,SE,True,17.052149057388306
+The Disputes application shall ensure that only users with the appropriate access level are allowed to initiate dispute requests.,3,NFR,SE,SE,True,17.963629245758057
+Only adjusters can request recycled parts audit reports. No users without an adjuster role shall request recycled parts audits.,3,NFR,SE,SE,True,18.181339740753174
+The product shall be easy to use. 90% of users will be able to successfully reserve a conference room within 5 minutes of product use.,4,NFR,US,US,True,18.50633478164673
+The product shall allow for intuitive searching of available conference rooms.,4,NFR,US,US,True,15.913613080978394
+The system shall be used by realtors with no training.,4,NFR,US,US,True,15.687811136245728
+An anonymous survey will show that 70% of customers are comfortable purchasing streaming movies after 2 weeks using the website.,4,NFR,US,US,True,17.641046285629272
+The interface shall be easy to use. 90% of users should be able to successfully use the system to generate a report on their first use. The interface should adhere to IBM usability standards.,4,NFR,US,US,True,18.785141706466675
+Users shall be able to view at least 25 NFL player statistics and points on each page.,4,FR,,FR,False,9.040763854980469
+The verbiage used within the system shall be consistent with Standard English and the terminology of the national Nursing Community.,4,NFR,US,US,True,17.44886016845703
+The product shall be installed by an untrained realtor without recourse to separately-printed instructions.,4,NFR,US,US,True,17.154002904891968
+he product shall be translated into foreign languages other than the target market countries' languages in future releases. For each emerging target market it shall take no more than 5 days to configure the product for that market's language.,4,NFR,O,O,False,21.79927706718445
+All CCR users shall receive training before the WCS system is deployed. One training session will be held for 100% of CCR users before system deployment (based on a CCR user being available),4,NFR,US,US,True,19.009899616241455
+Movies shall be encoded and streamed via Windows Media Player 9.0.,1,NFR,O,O,True,17.978690147399902
+Website must be fully operational with MSN TV2.,1,NFR,O,O,True,15.282752275466919
+The website should use Flash to provide animation on the home page.,1,NFR,US,US,False,15.691154718399048
+he system shall interface with CampusConnect's central server,1,NFR,O,O,True,14.891008377075195
+The Disputes application shall interface with the Letters application. This will allow the Disputes application to request letters as part of the dispute initiation and dispute follow up process. All letter requests must be sent to the Print Letter Utility application.,1,NFR,O,O,True,19.761629343032837
+The lead washing process will operate within the established physical web service structure.,1,NFR,O,O,True,16.012794256210327
+The product shall adhere to the corporate Architecture guidelines,1,NFR,O,O,True,15.87075424194336
+The product will require collaboration with a database management system (DBMS). The DBMS may be located on the same machine as the product or on a separate machine residing on the same computer network.,1,NFR,O,O,True,19.569605827331543
+The product shall be able to be installed in any operating environment within 2 days.,1,NFR,O,O,True,17.24115800857544
+We must be able to interface with the following browsers: IE 5.X 6.0 Netscape 6.x 7.x 8.x and Firefox 1.0.,1,NFR,US,US,False,18.43146562576294

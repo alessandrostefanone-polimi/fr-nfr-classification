@@ -16,6 +16,7 @@ Research Focus: AI applications to industrial engineering, digital twins, PLM
 """
 
 import json
+import os
 import time
 import logging
 from typing import Dict, List, Optional, Tuple, Union
@@ -31,6 +32,8 @@ from pathlib import Path
 # LangChain imports for LLM integration
 try:
     from langchain_anthropic import ChatAnthropic
+    from langchain_community.llms import Ollama
+    from langchain_openai import OpenAI, ChatOpenAI
     from langchain_core.prompts import ChatPromptTemplate
     from pydantic import BaseModel, Field
     from langchain_core.output_parsers import PydanticOutputParser
@@ -91,6 +94,7 @@ class LLMNFRSubclassifier:
     
     def __init__(
         self, 
+        model_type: str = "claude",
         model_name: str = "claude-3-5-haiku-20241022",
         api_key: Optional[str] = None,
         use_few_shot: bool = True,
@@ -105,6 +109,7 @@ class LLMNFRSubclassifier:
             use_few_shot: Whether to use few-shot learning with examples
             temperature: Temperature for LLM generation (0.0 for deterministic)
         """
+        self.model_type = model_type
         self.model_name = model_name
         self.use_few_shot = use_few_shot
         self.temperature = temperature
@@ -113,12 +118,16 @@ class LLMNFRSubclassifier:
             raise ImportError("LangChain is required. Please install: pip install langchain langchain-anthropic")
         
         # Initialize LLM
-        self.llm = ChatAnthropic(
-            model=model_name,
-            api_key=api_key,
-            temperature=temperature
-        )
-        
+        if api_key:
+            self.api_key = api_key
+        else:
+            self.api_key = os.environ.get('ANTHROPIC_API_KEY')
+
+        if not self.api_key:
+            raise ValueError("ANTHROPIC_API_KEY must be provided either as parameter or environment variable")
+
+        self.llm = self._initialize_llm()
+                
         # Setup output parser
         self.output_parser = PydanticOutputParser(pydantic_object=NFRSubclassificationPrompt)
         
@@ -127,6 +136,45 @@ class LLMNFRSubclassifier:
         
         # Setup logging
         self._setup_logging()
+
+        
+    def _initialize_llm(self):
+        """Initialize the appropriate LLM based on model_type"""
+        if self.model_type == "claude":
+            # Ensure API key is set
+            if not os.getenv("ANTHROPIC_API_KEY"):
+                raise ValueError("ANTHROPIC_API_KEY environment variable not set")
+            
+            return ChatAnthropic(
+                model_name=self.model_name,
+                temperature=self.temperature,
+                anthropic_api_key=os.getenv("ANTHROPIC_API_KEY"),
+                max_tokens=1000
+            )
+        
+        elif self.model_type == "ollama":
+            return Ollama(
+                model=self.model_name,
+                temperature=self.temperature,
+                base_url="http://localhost:11434"
+            )
+
+        elif self.model_type == "deepseek":
+            # Ensure API key is set
+            if not os.environ.get("DEEPSEEK_API_KEY"):
+                os.environ["DEEPSEEK_API_KEY"] = getpass.getpass("Enter your DEEPSEEK API key: ")
+
+            # Instantiate ChatOpenAI (model_name and openai_api_key are accepted in current versions)
+            return ChatOpenAI(
+                model_name=self.model_name,
+                temperature=self.temperature,
+                openai_api_key=os.getenv("DEEPSEEK_API_KEY"),
+                base_url="https://api.deepseek.com",
+                max_tokens=1000
+            )
+        
+        else:
+            raise ValueError(f"Unsupported model_type: {self.model_type}")
     
     def _setup_logging(self):
         """Setup logging configuration"""
